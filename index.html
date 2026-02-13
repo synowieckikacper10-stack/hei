@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walentynka 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+button {
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Czy zostaniesz moją walentynką? 💕</h1>
+    <button id="yes">TAK</button>
+    <button id="no">NIE</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const no = document.getElementById("no");
+    let size = 20;
+
+    no.onclick = () => {
+        size += 10;
+        no.style.fontSize = size + "px";
+        if (size > 80) {
+            no.style.position = "fixed";
+            no.style.top = 0;
+            no.style.left = 0;
+            no.style.width = "100vw";
+            no.style.height = "100vh";
+            no.innerText = "DOBRA 😭";
+        }
+    };
+});
+</script>
+
+</body>
+</html>
